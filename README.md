@@ -18,7 +18,8 @@ Project description - one or two paragraphs. The enemy is dark and creates major
 
 Setup a Python 3 based environment using a virtual env.
 Ensure you have pip installed for Python 3.
-Clone this github repository and install it from source.
+Fork this GitHub repository.
+Clone the forked repository.
 
 Edit the .gitignore file and include the exclusions for the types of 
 files, you typically find in a python project, which should not be commited
@@ -26,34 +27,65 @@ to GitHub.
 
 Once you have completed these steps, you will be ready to start the project. 
 
+# Part 1
 
-```js
-import { Fantastico } from '@modus/awesome-solution';
+In this task we will using the part1 directory as a project to experiment with the 
+commandline and file manipulation
 
-const amazing = new Fantastico();
+Your first task will be to figure out how to install the part1 directory via 
+pip into your local virtual environment. 
 
-export default amazing;
+Once this is done, you can move onto these questions. 
+
+## Question 1
+
+Go ahead and run the installed code.
+
+Once the project is started, it should print out the message:
+
+```
+When the project starts, it should show this message
 ```
 
-# How it works
+Your first task is to fix this. The message is there, but something isn't right.
 
-{Describe how it works. Include images if possible.}
 
-# Developing
+## Question 2
 
-{Show how engineers can set up a development environment and contribute.}
+We now need to add some flags to our project to handle user input from the commandline.
 
-## Prerequisites
+First we want to add a help flag. When the user parses in the help flag it should print the following message
 
-{Explain the prerequisites}
+```
+Thank you for asking for help
+```
 
-## Testing
+## Question 3
 
-{Notes on testing}
+Next up, the user needs to be able to pass a string into the program and see if it is a palandrome.
 
-## Contributing
+Add in a new flag that handles this.
 
-{How can the community contribute}
+## Question 4
+
+There is a YAML file in this repository. We now want to add a flag that takes this YAML file as input.
+Once the file is input it should convert the contents into a JSON object and output it to a new file 
+called converted.json
+
+## Question 4
+
+
+
+Part 2.
+
+Setting up Django.
+
+
+
+  
+
+
+
 
 # Modus Create
 
