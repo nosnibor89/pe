@@ -1,2 +1,2 @@
-print "When the project starts, it should show this message"
+print "This is our Django project generator tool set."
 

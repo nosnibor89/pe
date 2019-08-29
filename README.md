@@ -27,53 +27,91 @@ to GitHub.
 
 Once you have completed these steps, you will be ready to start the project. 
 
+# Background
+
+We want to build a proof of concept project that consists of a command line tool
+for generating some of the files needed by the project and the project itself,
+a Django website.
+
+The command line tools will take care of important tasks such as:
+
+1. Checking if the project name is a palindrome
+2. Providing help to the user
+3. Converting YAML into JSON, just incase our engineers prefer to use JSON cloud formation templates.
+4. Building out all the basic skeleton files of a Django site 
+
+We're going to start with Part 1 of the project, which is the command line tools. 
+
+
 # Part 1
 
 In this task we will using the part1 directory as a project to experiment with the 
-commandline and file manipulation
+commandline and file manipulation, in order to show a PoC for generating Django projects.
 
 Your first task will be to figure out how to install the part1 directory via 
 pip into your local virtual environment. 
 
-Once this is done, you can move onto these questions. 
+Once this is done, you can move onto these requirements, provided by the Project Manager.
 
-## Question 1
+## Requirement 1
 
 Go ahead and run the installed code.
 
 Once the project is started, it should print out the message:
 
 ```
-When the project starts, it should show this message
+This is our Django project generator tool set.
 ```
 
-Your first task is to fix this. The message is there, but something isn't right.
+The project manager noticed something isn't right, buyt the junior engineer isn't sure why it isn't working.
+
+Your first task is to fix this. The message is there, but something isn't working as expected!
 
 
-## Question 2
+## Requirement 2
 
 We now need to add some flags to our project to handle user input from the commandline.
 
 First we want to add a help flag. When the user parses in the help flag it should print the following message
 
 ```
-Thank you for asking for help
+Thank you for asking for help. These tools are used to generate a Django project and convert ClloudFormation code from YAML to JSON.
 ```
 
-## Question 3
+This should help users of the tool know what it is for. The PM doesn't mind how you handle the flag, jsut use the best tools available in Python for the job. 
 
-Next up, the user needs to be able to pass a string into the program and see if it is a palandrome.
 
-Add in a new flag that handles this.
+## Requirement 3
 
-## Question 4
+The PM has been told by management, that all rpojects going forwward should have names that are palindromes. He thought it might be helpful, to allow engineers to check if the project name is a palindrome before creating it.
 
-There is a YAML file in this repository. We now want to add a flag that takes this YAML file as input.
+He's decided to call this project tacocat.
+
+Add in a new flag that handles this requirement.
+
+## Requirement 4
+
+The DevOps team spoke to the PM and mentioned that in the future, they would like to host this project on AWS. It's not a huge concern right now, but some DevOps engineers have complained that they prefer to use JSON rather than YAML, and would like projects to have the ability to convert YAMl files to JSON if requested. 
+
+There is a YAML file in this repository containing a snippet of Cloud Formation code. We now want to add a flag that takes this YAML file as input.
 Once the file is input it should convert the contents into a JSON object and output it to a new file 
-called converted.json
+called tacocat_cf.json
 
-## Question 4
+You can use the following document as a guide to what the output might look like in JSON format:
 
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2.html
+
+## Requirement 5
+
+We can now check if our project is palindrome. We've also got the basics for converting YAML to JSON (just incase we want to maintain our CF templates as JSOn rather than YAML).
+
+We now need to add a command line task, to create a new Django project skeleton called tacocat in the part2 folder.
+
+So go ahead and add this, and make sure it generates a new project called tacocat! You might want to pass in the project name from the commandline, and maybe even re-use your palindrome function, to see if it is a valid name!
+
+Once done, all the basic files needed to start a Django project should be present in the part2/tacocat folder (where tacocat is the project name)
+
+This is deliverbale 1. The PM is exc ited you have made so much progress. It's now time to build out a basic site.
 
 
 Part 2.
