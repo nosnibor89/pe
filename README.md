@@ -16,7 +16,16 @@ Project description - one or two paragraphs. The enemy is dark and creates major
 
 # Getting Started
 
-{Minimal steps required for a quick software trial.}
+Setup a Python 3 based environment using a virtual env.
+Ensure you have pip installed for Python 3.
+Clone this github repository and install it from source.
+
+Edit the .gitignore file and include the exclusions for the types of 
+files, you typically find in a python project, which should not be commited
+to GitHub.
+
+Once you have completed these steps, you will be ready to start the project. 
+
 
 ```js
 import { Fantastico } from '@modus/awesome-solution';
