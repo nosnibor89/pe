@@ -151,6 +151,8 @@ separated list of integers, for example:
 1,3,2,1,4,5,3,2,6,2,67,21,6,3
 ```  
 
+How you handle non-integers is up to you!
+
 ## Requirement 4
 
 The View needs to be accessible from a URL called `seven/`
