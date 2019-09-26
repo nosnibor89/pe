@@ -1,6 +1,5 @@
 from setuptools import setup, find_packages
 
-
 setup(
     name='python-exercise',
     version='1.0.0',
@@ -11,7 +10,8 @@ setup(
     package_dir={'': 'src'},
     include_package_data=True,
     packages=find_packages('src'),
-    install_requires = [
+    install_requires=[
+        'django',
     ],
     entry_points={
         'console_script': [

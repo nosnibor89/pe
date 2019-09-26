@@ -1,7 +1,7 @@
 import argparse
 
 from python_exercise.tools.aws.cf_manager import CFManager
-from python_exercise.tools.palindrome import validate_palidrome
+from python_exercise.tools.palindrome import validate_palindrome, is_palindrome
 from python_exercise.tools.scaffold import django
 
 parser = argparse.ArgumentParser(
@@ -37,13 +37,14 @@ parser.add_argument('project_name', help='The project name')
 options = parser.parse_args()
 
 if options.check_palindrome:
-    validate_palidrome(options.project_name)
+    validate_palindrome(options.project_name)
 
 if options.cf_file:
     manager = CFManager(options.cf_file)
     manager.dump_json(target=options.project_name)
 
 if options.django_project_path:
-    django.create_project(options.project_name)
-
-# print(options)
+    if is_palindrome(options.project_name):
+        django.create_project(options.project_name, path=options.django_project_path)
+    else:
+        print('You must provide a palindrome project name')
