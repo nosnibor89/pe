@@ -1,8 +1,4 @@
-Hey I started to work on this (at my own slow pace :slightly_smiling_face:)
-
-Remember I’m newbie to python, so I have a question the way we should run the tool in by doing `python -m python_exercise` right ?
-
 Notes:
-1. In requirement 1, I think is clearer if we shuffle this sentences.
+1. In requirement 1(part 1), I think is clearer if we shuffle this sentences.
     "The message is there, but something isn't working as expected!
      Your first task is to fix this."

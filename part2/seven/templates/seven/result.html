@@ -1,0 +1,16 @@
+{% extends "seven/layout.html" %}
+
+{% block content %}
+<article class="message is-success">
+    <div class="message-body">
+        <p>Here is a list of number you can use to get 7:</p>
+        <p>
+            {% for pair in pairs %}
+            {{pair}}
+            {% endfor %}
+        </p>
+    </div>
+</article>
+<a href="{% url 'seven' %}" class="button is-link">Back</a>
+{% endblock %}
+

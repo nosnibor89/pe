@@ -11,7 +11,7 @@ setup(
     include_package_data=True,
     packages=find_packages('src'),
     install_requires=[
-        'django',
+        'django==2.2',
     ],
     entry_points={
         'console_script': [
