@@ -13,18 +13,30 @@ def _get_pairs(number_list):
     :return: pairs:list
     """
     # Filter numbers and remove duplicates
-    numbers = [int(number) for number in number_list.split(',') if int(number) < UP_TO]
-    numbers = set(numbers)
+    numbers = [int(number) for number in number_list.split(',')]
+
+    numbers = sorted(list(set(numbers)))
+
+    head_pointer = 0
+    tail_pointer = len(numbers) - 1
 
     # Get unique pairs
     pairs = []
-    for number_x in numbers:
-        print(number_x)
-        for number_y in numbers:
-            if number_x + number_y == UP_TO \
-                    and ((number_x, number_y) not in pairs
-                         and (number_y, number_x) not in pairs):
-                pairs.append((number_x, number_y))
+    while head_pointer < tail_pointer:
+        head = numbers[head_pointer]
+        tail = numbers[tail_pointer]
+        pair_sum = head + tail
+
+        if pair_sum == UP_TO:
+            pairs.append((head, tail))
+            head_pointer = head_pointer + 1
+            tail_pointer = tail_pointer - 1
+
+        elif pair_sum < UP_TO:
+            head_pointer = head_pointer + 1
+
+        elif pair_sum > UP_TO:
+            tail_pointer = tail_pointer - 1
 
     return pairs
 
